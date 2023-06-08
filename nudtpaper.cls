@@ -395,8 +395,8 @@ gbnamefmt=lowercase,gbpub=false,doi=false,url= false]{biblatex}%
 \titleformat{\subsubsection}{\bfseries \heiti\xiaosi[1.25]}{\thesubsubsection}{1em}{}
 \titlespacing{\chapter}{0pt}{2.4ex-\topskip-\heightof{A}}{2.4ex \@minus 2bp}
 \titlespacing{\section}{0pt}{2ex-\heightof{a}}{2ex \@minus 2bp}
-\titlespacing{\subsection}{2em}{2ex \@minus 2bp}{2ex \@minus 2bp}
-\titlespacing{\subsubsection}{2em}{1ex \@minus 2bp}{1ex \@minus 2bp}
+\titlespacing{\subsection}{0pt}{2ex \@minus 2bp}{2ex \@minus 2bp}
+\titlespacing{\subsubsection}{0pt}{1ex \@minus 2bp}{1ex \@minus 2bp}
 \renewcommand\normalsize{%
 \@setfontsize\normalsize{12bp}{12.87bp}%
 \renewcommand{\baselinestretch}{1.3}%
