@@ -60,6 +60,7 @@
 % gbnamefmt=lowercase,gbpub=false,doi=false]{biblatex}%
 \RequirePackage[backend=biber,style=gb7714-2015,gbalign=right,%
 gbnamefmt=lowercase,gbpub=false,doi=false,url= false]{biblatex}%
+\addbibresource[location=local]{ref/refs.bib}
 \setlength{\bibitemsep}{1pt}
 \setlength{\bibnamesep}{0ex}
 \setlength{\bibinitsep}{0ex}
@@ -120,6 +121,14 @@ gbnamefmt=lowercase,gbpub=false,doi=false,url= false]{biblatex}%
                          {\printtext{\bibstring{incn}}}%
                          {\printtext{\bibstring{in}}}%
                          }}%\newunit\newblock\intitlepunct
+\else
+\RequirePackage[numbers,sort&compress,square]{natbib}
+\let\newcite=\cite
+\let\parencite=\newcite
+\let\inlinecite=\newcite
+\newcommand{\upcite}[1]{\textsuperscript{\newcite{#1}}} % 上标形式引用
+\renewcommand{\cite}[1]{\textsuperscript{\newcite{#1}}} % 上标形式引用
+\fi
 \RequirePackage{hyperref}
 % 超链接
 \hypersetup{%
@@ -583,7 +592,7 @@ gbnamefmt=lowercase,gbpub=false,doi=false,url= false]{biblatex}%
       \vspace*{6pt}
 
       \sihao
-      \textbf{\song{首\hfill{}次\hfill{}任\hfill{}职\hfill{}专\hfill{}业}}： & \sihao\underline{\makebox[108pt]{\textbf{\fs{\@firstmajor}}}} & \sihao\heiti{学\hfill{}历\hfill{}教\hfill{}育\hfill{}专\hfill{}业}： & \sihao\underline{\makebox[108pt]{\textbf{\fs{\@major}}}} \\
+      \textbf{\song{首\hfill{}次\hfill{}任\hfill{}职\hfill{}专\hfill{}业}}： & \sihao\underline{\makebox[108pt]{\textbf{\fs{\@firstmajor}}}} & \sihao\textbf{\song{学\hfill{}历\hfill{}教\hfill{}育\hfill{}专\hfill{}业}}： & \sihao\underline{\makebox[108pt]{\textbf{\fs{\@major}}}} \\
       \vspace*{6pt}
 
       \sihao
