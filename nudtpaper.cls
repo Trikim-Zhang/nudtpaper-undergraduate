@@ -32,7 +32,7 @@
 \RequirePackage[center,pagestyles]{titlesec}
 \RequirePackage{titletoc}
 \RequirePackage{graphicx}
-\graphicspath{{figures/}}
+\graphicspath{{image/svg/}{image/}{images/}{figure/}{figures/}{resources/}}
 \RequirePackage[config]{subfig}
 \RequirePackage{float}
 \RequirePackage{array}
@@ -60,7 +60,7 @@
 % gbnamefmt=lowercase,gbpub=false,doi=false]{biblatex}%
 \RequirePackage[backend=biber,style=gb7714-2015,gbalign=right,%
 gbnamefmt=lowercase,gbpub=false,doi=false,url= false]{biblatex}%
-\addbibresource[location=local]{ref/refs.bib}
+\addbibresource[location=local]{ref/bibliography.bib}
 \setlength{\bibitemsep}{1pt}
 \setlength{\bibnamesep}{0ex}
 \setlength{\bibinitsep}{0ex}
@@ -473,8 +473,8 @@ gbnamefmt=lowercase,gbpub=false,doi=false,url= false]{biblatex}%
 \DeclareCaptionLabelSeparator{colon}{-}
 \RequirePackage{mathtools}
 \renewcommand\theequation{\thechapter-\arabic{equation}}
-\renewcommand\thefigure{\arabic{chapter}-\arabic{figure}}
-\renewcommand\thetable{\arabic{chapter}-\arabic{table}}
+\renewcommand\thefigure{\thechapter-\arabic{figure}}
+\renewcommand\thetable{\thechapter-\arabic{table}}
 \renewcommand{\thesubfigure}{(\alph{subfigure})}
 \renewcommand{\thesubtable}{(\alph{subtable})}
 \let\thu@LT@array\LT@array
@@ -541,10 +541,10 @@ gbnamefmt=lowercase,gbpub=false,doi=false,url= false]{biblatex}%
 \renewcommand\theremark{\thechapter-\arabic{remark}}
 %%% crefformat settings
 \crefformat{figure}{#2图~#1#3}
-\crefrangeformat{figure}{图~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefrangeformat{figure}{图~(#3#1#4)\;到{}\;(#5#2#6)}
 \crefmultiformat{figure}{图~(#2#1#3)}{和~(#2#1#3)}{，(#2#1#3)}{和~(#2#1#3)}
 \crefformat{table}{#2表#1#3}
-\crefrangeformat{table}{表(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefrangeformat{table}{表(#3#1#4)\;到{}\;(#5#2#6)}
 \crefmultiformat{table}{表~(#2#1#3)}{和~(#2#1#3)}{，(#2#1#3)}{和~(#2#1#3)}
 \crefformat{equation}{#2式~(#1#3)}
 \crefrangeformat{equation}{式~(#3#1#4)\;\~{}\;(#5#2#6)}
