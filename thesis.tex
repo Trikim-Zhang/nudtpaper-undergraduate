@@ -2,9 +2,8 @@
 %!BIB program = biber%
 % 出现任何问题请联系（zhangxinhang19@foxmial.com）
 \documentclass[biber,ttf]{nudtpaper}
-% anon-盲评、ttf-字体、biber-参考文献
+% biber-参考文献、ttf-字体、anon-盲评、twoside-book
 \usepackage{mynudt}
-\addbibresource[location=local]{ref/refs.bib}
 
 \title{你的题目\\
 可以换行}%题目
@@ -47,11 +46,11 @@
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{参考文献}
+\renewcommand{\normalsize}{\wuhao[1.25]} %
+\renewcommand{\baselinestretch}{1.35}
 \ifisbiber
 {\hyphenpenalty=500 %
 \tolerance=9900 %
-\renewcommand{\normalsize}{\wuhao[1.25]} %
-\renewcommand{\baselinestretch}{1.35}
 \printbibliography[heading=bibliography, title=参考文献]
 }
 \else
