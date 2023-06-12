@@ -30,6 +30,9 @@
 \renewcommand{\algorithmicensure}{\textbf{求:\quad}}
 \renewcommand{\algorithmiccomment}[1]{\hfill$\rhd$ #1}
 % \renewcommand{\algorithmiccomment}[1]{\hfill$\blacktriangleright$ #1}
+\RequirePackage{chngcntr}
+\counterwithin{algorithm}{chapter} %算法每章重新编号
+\renewcommand {\thealgorithm} {\thechapter{}-\arabic{algorithm}}%算法的编号改为类如2-2的格式
 
 \DefineVerbatimEnvironment{code}{Verbatim}%
   {frame=lines,framerule=0.5mm,rulecolor=\color{black},%
